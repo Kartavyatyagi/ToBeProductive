@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/main"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/mintgreen"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/titles"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/date"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="17dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/welcome"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="25dp"
+        android:gravity="center"
+        android:paddingHorizontal="35dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@drawable/green_box"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last week"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:textColor="@color/main"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"/>
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="6dp"/>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@drawable/green_box"
+            android:layout_marginTop="22dp"
+            android:paddingHorizontal="20dp"
+            android:gravity="center"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/dayscounter"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:background="@drawable/circle"
+                android:text="000"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continious Days"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:textColor="@color/main"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/modifyData"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@drawable/green_box"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cont"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modify Data"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:textColor="@color/main"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@drawable/green_box"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last week"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:textColor="@color/main"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"/>
+
+            <com.jjoe64.graphview.GraphView
+                android:overScrollMode="@+id/graph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

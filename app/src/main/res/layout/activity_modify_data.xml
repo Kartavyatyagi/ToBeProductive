@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/main"
+    tools:context=".ModifyData">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+        android:id="@+id/left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/left"
+        android:scaleType="centerInside"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+        <ImageView
+        android:id="@+id/right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/right"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/titles"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/left"
+            android:layout_toLeftOf="@+id/right"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:background="@drawable/background"
+        android:paddingTop="30dp"
+        android:paddingBottom="25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="25dp">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="1dp"
+                android:divider="@color/main"
+                android:background="@drawable/green_box_outlined"
+                android:listSelector="#000000000"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/green_box_outlined"
+                android:padding="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
